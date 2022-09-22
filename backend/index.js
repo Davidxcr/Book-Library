@@ -37,7 +37,7 @@ app.post("/books", (req, res) => {
 
     db.query(q, [values], (err, data) => {
         if (err) return res.json(err)
-        return res.json("Book Created")
+        return res.json("Book has been created successfully")
     })
 })
 
@@ -48,7 +48,7 @@ app.delete("/books/:id", (req, res) => {
 
     db.query(q, [bookId], (err, data) => {
         if (err) return res.json(err)
-        return res.json("Book has been deleted")
+        return res.json("Book has been deleted successfully")
     })
 })
 
